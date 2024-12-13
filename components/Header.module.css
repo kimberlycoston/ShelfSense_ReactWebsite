@@ -1,0 +1,95 @@
+/* Root styles */
+:root {
+    --text-color: #000; /* Default text color */
+    --hover-color: #EA5141; /* Hover text color */
+    --background-color: #FDFFF2; /* Background color */
+}
+
+/* Header container */
+.header {
+    display: flex;
+    justify-content: flex-end; /* Push everything to the right */
+    align-items: center;
+    padding: 20px;
+    background-color: var(--background-color);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Navbar container */
+.nav {
+    display: flex;
+    justify-content: flex-end; /* Align links to the right */
+    align-items: center;
+    width: 100%;
+}
+
+/* Navigation links (default horizontal layout) */
+.navLinks {
+    display: flex;
+    list-style: none;
+    gap: 20px; /* Space between links */
+    margin: 0;
+    padding: 0;
+    justify-content: flex-end; /* Align links to the right */
+}
+
+/* Individual link styles */
+.navLink {
+    text-decoration: none;
+    color: var(--text-color);
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.3s ease;
+}
+
+.navLink:hover {
+    color: var(--hover-color); /* Change text color on hover */
+}
+
+/* Menu button (hidden by default) */
+.menuButton {
+    display: none; /* Only visible on smaller screens */
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease;
+    color: #000; /* Default color */
+}
+
+/* Change color on hover */
+.menuButton:hover {
+    color: #EA5141; /* Red when hovered */
+}
+
+/* Change color when menu is active (clicked) */
+.menuButton.active {
+    color: #EA5141; /* Red when active */
+}
+
+/* Responsive dropdown menu */
+@media (max-width: 768px) {
+    .menuButton {
+        display: block; /* Show menu button on small screens */
+    }
+
+    .navLinks {
+        display: none; /* Hide links by default */
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px;
+        position: absolute;
+        top: 60px;
+        right: 20px; /* Align dropdown menu to the right */
+        background-color: var(--background-color);
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .navLinks.show {
+        display: flex; /* Show links when menu is toggled */
+    }
+}

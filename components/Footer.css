@@ -1,0 +1,81 @@
+.footer {
+    background-color: #FDFFF2; /* Light background */
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    margin-top: 20px;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Space between logo/brand and links */
+    align-items: center; /* Vertically center items */
+    padding: 10px 20px; /* Adjust padding as needed */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.footer-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-logo {
+    height: 40px; /* Adjust size */
+    width: auto;
+}
+
+.footer-title {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px; /* Adjust size as needed */
+    font-weight: 600; /* Use bold for emphasis */
+    color: #333; /* Ensure text color matches the design */
+}
+
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links a {
+    text-decoration: none;
+    color: #555;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #ea5141; /* Hover effect */
+}
+
+.footer-divider {
+    margin: 10px 0;
+    border: none;
+    height: 1px;
+    background-color: #ddd;
+}
+
+.footer-copyright {
+    font-size: 12px;
+    color: #999;
+}
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stack everything vertically */
+        align-items: center; /* Center items */
+    }
+
+    .footer-brand {
+        margin-bottom: 20px; /* Add space between brand and links */
+    }
+
+    .footer-links {
+        justify-content: center; /* Center-align the links */
+    }
+}

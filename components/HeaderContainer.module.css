@@ -1,0 +1,51 @@
+/* HeaderContainer.module.css */
+.headerContainer {
+    
+    align-items: center; /* Center items horizontally */
+    position: relative; /* Keep the triangle background positioned properly */
+    text-align: center; /* Center text content */
+    padding: 30px; /* Add space inside the container */
+    margin: 0; /* Center the container */
+    background-color: #FDFFF2; /* Background color */
+    overflow: hidden; /* Prevent content overflow */
+    z-index: 1; /* Ensure container content is above .triangleBg */
+    width: 90%; /* Make it responsive by limiting its width */
+}
+
+
+.headerImage {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Maintains the aspect ratio */
+    padding: 20px 0; /* Adds space on left and right */
+    z-index: 1; /* Brings image above .triangleBg */
+}
+
+.tagline {
+    text-align: left;
+    color: #333; /* Choose a suitable text color */
+    margin-top: 5px; /* Adds space between the image and the text */
+    font-family: 'Montserrat', sans-serif; /* Apply Montserrat font */
+    font-size: clamp(6px, 5vw, 56px); /* Responsive font size */
+    max-width: 100%; /* Ensure it doesn’t overflow the container */
+    z-index: 1; /* Brings tagline above .triangleBg */
+}
+
+.triangleBg {
+    position: absolute; /* Position relative to viewport */
+    bottom: 0; /* Anchor at the bottom of the viewport */
+    transform: translateY(-10%);
+    left: 0;
+    width: 90vw; /* Full width */
+    height: 300px; /* Height of the triangle */
+    background-color: #EA5141; /* Triangle color */
+    clip-path: polygon(0 0, 0 100%, 100% 100%); /* Triangle shape */
+    z-index: -1; /* Push behind the header image */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 768px) {
+    .triangleBg {
+        bottom: 0;
+        height: 200px; /* Reduce height for smaller screens */
+    }
+}
